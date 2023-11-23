@@ -1,11 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Memory from './components/MemoryItem';
 import Header from './UI/Header';
 import MemoriesList from './components/MemoriesList';
 
-export type Memory = {
+type Memory = {
   id: number,
   description: string,
   imgUrl?: string,
