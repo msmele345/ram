@@ -1,25 +1,43 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Memory from './components/MemoryItem';
+import Header from './UI/Header';
+import MemoriesList from './components/MemoriesList';
+
+export type Memory = {
+  id: number,
+  description: string,
+  imgUrl?: string,
+  age: string
+};
+
+const defaultMemories: Memory[] = [
+  {
+    id: 1,
+    description: "Olympic National Park 2023",
+    age: '0-2'
+  },
+  {
+    id: 2,
+    description: "Second Birthday 2023",
+    age: '0-2'
+  },
+  {
+    id: 1,
+    description: "Fun around Chicago",
+    age: '0-2'
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HAYYOOO
-        </a>
-      </header>
-    </div>
+      <>
+        <Header text='Mila Memories'/>
+        <div className='container'>
+            <MemoriesList memories={defaultMemories}/>
+        </div>
+      </>
   );
 }
 
