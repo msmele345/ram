@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
-import MemoryItem, { Memory } from "./MemoryItem";
+import MemoryItem from "./MemoryItem";
+import { Memory } from '../common/@types/types';
 
 
 type MemoriesListProps = {

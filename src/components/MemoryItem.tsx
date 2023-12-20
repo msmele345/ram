@@ -1,13 +1,6 @@
 import React from "react";
 import Card from "../common/Card";
-
-export type Memory = {
-    id: number,
-    description: string,
-    imgUrl?: string,
-    age: string
-  };
-  
+import { Memory } from '../common/@types/types';
 
 type MemoryItemProps = {
     memory: Memory,

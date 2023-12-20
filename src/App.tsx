@@ -2,13 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from './UI/Header';
 import MemoriesList from './components/MemoriesList';
+import { Memory } from './common/@types/types';
 
-type Memory = {
-  id: number,
-  description: string,
-  imgUrl?: string,
-  age: string
-};
 
 const defaultMemories: Memory[] = [
   {
@@ -40,3 +35,4 @@ function App() {
 }
 
 export default App;
+
